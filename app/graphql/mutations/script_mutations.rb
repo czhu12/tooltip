@@ -15,7 +15,6 @@ module Mutations::ScriptMutations
       params = Script.attributes_from_graphql_input(args[:attributes])
       script = Script.new(params)
 
-      debugger
       if script.save
         { script: script }
       else
