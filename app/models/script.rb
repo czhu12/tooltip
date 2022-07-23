@@ -1,3 +1,22 @@
+# == Schema Information
+#
+# Table name: scripts
+#
+#  id          :bigint           not null, primary key
+#  code        :text
+#  description :string
+#  run_count   :integer          default(0), not null
+#  slug        :string           not null
+#  title       :string           not null
+#  visibility  :integer          default("public")
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  user_id     :bigint
+#
+# Indexes
+#
+#  index_scripts_on_slug  (slug) UNIQUE
+#
 class Script < ApplicationRecord
   include Graphql::Assignable
   GRAPHQL_ATTRIBUTES = %i[title description code visibility slug]
