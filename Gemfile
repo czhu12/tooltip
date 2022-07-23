@@ -29,6 +29,7 @@ gem "devise"
 gem "rack-cors"
 gem "devise-jwt"
 gem 'graphql', '~> 2.0.9'
+gem 'administrate', "~> 0.16"
 
 gem "pundit"
 
