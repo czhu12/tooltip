@@ -129,6 +129,8 @@ GEM
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
     jwt (2.4.1)
+    light-service (0.18.0)
+      activesupport (>= 4.0.0)
     loofah (2.18.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -270,6 +272,7 @@ DEPENDENCIES
   graphql (~> 2.0.9)
   importmap-rails
   jbuilder
+  light-service
   pg (~> 1.2, < 2.0)
   puma (~> 5.0)
   pundit

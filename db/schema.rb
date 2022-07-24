@@ -43,6 +43,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_20_181527) do
     t.string "github_username"
     t.string "twitter_username"
     t.string "personal_website"
+    t.string "username", null: false
+    t.string "jti"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

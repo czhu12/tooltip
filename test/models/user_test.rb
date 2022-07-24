@@ -8,6 +8,7 @@
 #  email                  :string           default(""), not null
 #  encrypted_password     :string           default(""), not null
 #  github_username        :string
+#  jti                    :string
 #  last_sign_in_at        :datetime
 #  last_sign_in_ip        :string
 #  personal_website       :string
@@ -16,6 +17,7 @@
 #  reset_password_token   :string
 #  sign_in_count          :integer          default(0), not null
 #  twitter_username       :string
+#  username               :string           not null
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
 #
