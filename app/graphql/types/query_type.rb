@@ -10,7 +10,7 @@ module Types
     field :script, resolver: Resolvers::ScriptResolver::FetchScript,
       description: "Fetch script"
 
-    field :popular_scripts, resolver: Resolvers::ScriptResolver::ListPublicScripts,
+    field :scripts, resolver: Resolvers::ScriptResolver::ListPublicScripts,
       description: "Fetch popular script"
   end
 end

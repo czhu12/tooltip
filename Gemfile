@@ -11,6 +11,8 @@ gem 'light-service'
 gem "sprockets-rails"
 
 gem "pg", "~> 1.2", "< 2.0"
+gem "pg_search"
+gem "kaminari"
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
