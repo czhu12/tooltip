@@ -150,10 +150,6 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     jwt (2.4.1)
-<<<<<<< HEAD
-    light-service (0.18.0)
-      activesupport (>= 4.0.0)
-=======
     kaminari (1.2.2)
       activesupport (>= 4.1.0)
       kaminari-actionview (= 1.2.2)
@@ -166,7 +162,8 @@ GEM
       activerecord
       kaminari-core (= 1.2.2)
     kaminari-core (1.2.2)
->>>>>>> b578486b1a4a75d362ad8983f7e3993c8a909f6c
+    light-service (0.18.0)
+      activesupport (>= 4.0.0)
     loofah (2.18.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
