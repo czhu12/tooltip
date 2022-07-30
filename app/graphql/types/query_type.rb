@@ -11,6 +11,9 @@ module Types
       description: "Fetch script"
 
     field :popular_scripts, resolver: Resolvers::ScriptResolver::ListPublicScripts,
-      description: "Fetch popular script"
+      description: "Fetch popular scripts"
+
+    field :user_scripts, resolver: Resolvers::ScriptResolver::ListUserScripts,
+      description: "Fetch user scripts"
   end
 end
