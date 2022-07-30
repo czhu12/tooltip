@@ -32,13 +32,13 @@ module Resolvers::ScriptResolver
   end
 
   class ListPublicScripts < Resolvers::BaseResolver
-    type [Types::ModelTypes::ScriptType], null: true
+    type Types::OutputTypes::ScriptResultsType, null: false
     argument :page, Int
     argument :q, String, required: false
 
     def resolve(page:, q: nil)
       result = Scripts::List.execute(filters: {q: q}, page: page)
-      result.scripts
+      {scripts: result.scripts, total_pages: 1}
     end
   end
 end
