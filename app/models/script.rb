@@ -19,6 +19,9 @@
 #
 class Script < ApplicationRecord
   include Graphql::Assignable
+  include PgSearch::Model
+  pg_search_scope :search_for, against: [:title, :description]
+
   GRAPHQL_ATTRIBUTES = %i[title description code visibility slug]
   validates_presence_of :title
   validates_presence_of :visibility

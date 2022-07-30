@@ -32,12 +32,12 @@ module Resolvers::ScriptResolver
   end
 
   class ListPublicScripts < Resolvers::BaseResolver
-    include Graphql::Pundit::Authorize
-
     type [Types::ModelTypes::ScriptType], null: true
+    argument :page, Int
 
-    def resolve
-      Script.public_visibility
+    def resolve(page:)
+      result = Scripts::List.execute(filters: {}, page: page)
+      result.scripts
     end
   end
 end
