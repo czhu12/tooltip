@@ -9,8 +9,8 @@ module Scripts
     promises :scripts
     executed do |context|
       scripts = Script.public_visibility
-      if context.filters[:search].present?
-        scripts = scripts.search_for(context.filters[:search])
+      if context.filters[:q].present?
+        scripts = scripts.search_for(context.filters[:q])
       end
 
       context.scripts = scripts.page(context.page).per(PAGE_SIZE)
