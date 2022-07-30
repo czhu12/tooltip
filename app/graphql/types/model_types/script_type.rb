@@ -8,7 +8,7 @@ module Types::ModelTypes
     field :description, String, null: true
     field :code, String, null: true
     field :run_count, Integer, null: false
-    field :user_id, GraphQL::Types::BigInt, null: true
+    field :user, Types::ModelTypes::UserType, null: true
     field :visibility, String, null: true
   end
 end

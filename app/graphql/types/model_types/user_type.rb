@@ -3,5 +3,6 @@ module Types::ModelTypes
     implements GraphQL::Types::Relay::Node
 
     field :email, String, null: false
+    field :username, String, null: false
   end
 end
