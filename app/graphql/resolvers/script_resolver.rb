@@ -34,9 +34,10 @@ module Resolvers::ScriptResolver
   class ListPublicScripts < Resolvers::BaseResolver
     type [Types::ModelTypes::ScriptType], null: true
     argument :page, Int
+    argument :q, String, required: false
 
-    def resolve(page:)
-      result = Scripts::List.execute(filters: {}, page: page)
+    def resolve(page:, q: nil)
+      result = Scripts::List.execute(filters: {q: q}, page: page)
       result.scripts
     end
   end
