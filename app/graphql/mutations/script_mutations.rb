@@ -14,6 +14,7 @@ module Mutations::ScriptMutations
     def resolve(args)
       params = Script.attributes_from_graphql_input(args[:attributes])
       script = Script.new(params)
+      script.user = context[:current_user]
 
       if script.save
         { script: script }
