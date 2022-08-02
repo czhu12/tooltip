@@ -43,4 +43,8 @@ class Script < ApplicationRecord
       self.slug = SecureRandom.uuid
     end
   end
+
+  def increment!
+    self.update(run_count: self.run_count + 1)
+  end
 end

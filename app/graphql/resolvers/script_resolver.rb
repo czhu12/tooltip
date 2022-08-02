@@ -15,6 +15,7 @@ module Resolvers::ScriptResolver
         authorize!(script)
       end
 
+      script.increment!
       script
     end
   end
