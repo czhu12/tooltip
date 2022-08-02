@@ -7,14 +7,14 @@ module Types
     # Add root-level fields here.
     # They will be entry points for queries on your schema.
 
+    field :me, resolver: Resolvers::UserResolver::FetchCurrentUser,
+      description: "Get current user by token"
+
     field :script, resolver: Resolvers::ScriptResolver::FetchScript,
       description: "Fetch script"
 
     field :popular_scripts, resolver: Resolvers::ScriptResolver::ListPublicScripts,
       description: "Fetch popular scripts"
-
-    field :user_scripts, resolver: Resolvers::ScriptResolver::ListUserScripts,
-      description: "Fetch user scripts"
   
     field :scripts, resolver: Resolvers::ScriptResolver::ListPublicScripts,
       description: "Fetch popular script"

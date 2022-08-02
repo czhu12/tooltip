@@ -19,25 +19,21 @@ module Resolvers::ScriptResolver
     end
   end
 
-  class ListUserScripts < Resolvers::BaseResolver
-    include Graphql::Pundit::Authorize
-
-    type [Types::ModelTypes::ScriptType], null: true
-
-    def resolve
-      authenticate!
-
-      context[:current_user].scripts
-    end
-  end
-
   class ListPublicScripts < Resolvers::BaseResolver
     type Types::OutputTypes::ScriptResultsType, null: false
     argument :page, Int
+    argument :owner_id, Int, required: false
     argument :q, String, required: false
 
-    def resolve(page:, q: nil)
-      result = Scripts::List.execute(filters: {q: q}, page: page)
+    def resolve(page:, owner_id: nil, q: nil)
+      result = Scripts::List.execute(
+        filters: {
+          q: q,
+          owner_id: owner_id,
+        },
+        current_user: context[:current_user],
+        page: page,
+      )
       {scripts: result.scripts, total_pages: 1}
     end
   end

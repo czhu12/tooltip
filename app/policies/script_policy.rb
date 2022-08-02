@@ -4,7 +4,7 @@ class ScriptPolicy < ApplicationPolicy
   end
 
   def show?
-    return true if record.public?
+    return true if record.public_visibility?
     return true if owns?
     false
   end
