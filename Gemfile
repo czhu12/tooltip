@@ -36,6 +36,7 @@ gem 'administrate', "~> 0.16"
 gem "dotenv-rails", "~> 2.7"
 
 gem "pundit"
+gem 'pry', '~> 0.13.1'
 
 # Use Redis adapter to run Action Cable in production
 gem "redis", "~> 4.0"
