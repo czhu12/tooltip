@@ -11,7 +11,8 @@ module Users
     def self.actions
       [
         Users::Create,
-        Users::GenerateToken
+        Scripts::Assign,
+        Users::GenerateToken,
       ]
     end
   end

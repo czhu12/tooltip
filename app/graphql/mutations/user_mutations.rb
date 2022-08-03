@@ -3,6 +3,7 @@ module Mutations::UserMutations
     graphql_name 'signUpUser'
 
     argument :credentials, Types::InputTypes::UserCredentials, required: true
+    argument :script_slug, String, required: false
 
     field :token, String, null: true
     field :errors, String, null: true
