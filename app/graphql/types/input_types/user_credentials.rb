@@ -5,5 +5,6 @@ module Types::InputTypes
     argument :email, String, required: true
     argument :password, String, required: true
     argument :username, String, required: false
+    argument :personal_website, String, required: false
   end
 end
