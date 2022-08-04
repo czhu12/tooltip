@@ -31,7 +31,7 @@ class User < ApplicationRecord
   include Devise::JWT::RevocationStrategies::JTIMatcher
   include JwtAuthenticatable
 
-  GRAPHQL_ATTRIBUTES = %i[email password username]
+  GRAPHQL_ATTRIBUTES = %i[email password username personal_website]
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable

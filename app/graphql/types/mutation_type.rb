@@ -7,5 +7,6 @@ module Types
     mount_mutation Mutations::ScriptMutations::Update
     mount_mutation Mutations::UserMutations::SignIn
     mount_mutation Mutations::UserMutations::SignUp
+    mount_mutation Mutations::UserMutations::UpdateUser
   end
 end
