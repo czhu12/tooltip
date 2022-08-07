@@ -17,7 +17,7 @@ module Scripts
         scripts = scripts.where(user_id: context.filters[:owner_id])
       end
 
-      context.scripts = scripts.page(context.page).per(PAGE_SIZE)
+      context.scripts = scripts.order("run_count DESC").page(context.page).per(PAGE_SIZE)
     end
   end
 end
